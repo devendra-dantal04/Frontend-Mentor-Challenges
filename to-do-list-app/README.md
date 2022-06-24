@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](screenshot\desktop-dark.png)
+![](screenshot/desktop-dark.png)
 
 ### Links
 
