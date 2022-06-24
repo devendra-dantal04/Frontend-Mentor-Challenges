@@ -29,6 +29,8 @@ const ToDoItem = () => {
                     <p className={item.status === "Complete" ? lightTheme ? "item-text-light completed-light" : "item-text-dark completed-dark" : lightTheme ? "item-text-light":"item-text-dark"} >{item.content}</p>
                     <i onClick={()=>removeItem(item.id)} className={`fa-solid fa-xmark cross-icon ${lightTheme && "icon-light"}`}></i>
                 </div>)
+
+           
             })
         ): 
         currentState === "active" ? (items.map((item)=>{
@@ -42,7 +44,10 @@ const ToDoItem = () => {
                         <p className={item.status === "Complete" ? lightTheme ? "item-text-light completed-light" : "item-text-dark completed-dark" : lightTheme ? "item-text-light":"item-text-dark"} >{item.content}</p>
                         <i onClick={()=>removeItem(item.id)} className={`fa-solid fa-xmark cross-icon ${lightTheme && "icon-light"}`}></i>
                     </div>)
+
+                   
             }
+            return null
         })) : (items.map((item)=>{
             if(item.status ==="Complete"){
                 return(
@@ -54,7 +59,9 @@ const ToDoItem = () => {
                         <p className={item.status === "Complete" ? lightTheme ? "item-text-light completed-light" : "item-text-dark completed-dark" : lightTheme ? "item-text-light":"item-text-dark"} >{item.content}</p>
                         <i onClick={()=>removeItem(item.id)} className={`fa-solid fa-xmark cross-icon ${lightTheme && "icon-light"}`}></i>
                     </div>)
+                    
             }
+            return null
         }))
     }
        
@@ -62,18 +69,18 @@ const ToDoItem = () => {
         <div className={lightTheme ? "input-group-light-item border-p" : "input-group-dark-item border-p"}>
                 <div className="item-count">{items.length} items left</div>
                 <div className="state">
-                    <a name="all" onClick={handleState} className={currentState === "all" ? "activated" : ""}>All</a>
-                    <a name="active" onClick={handleState} className={currentState === "active" ? "activated" : ""}>Active</a>
-                    <a name="complete" onClick={handleState} className={currentState === "complete" ? "activated" : ""}> Completed </a>
+                    <a href={"/"} name="all" onClick={handleState} className={currentState === "all" ? "activated" : ""}>All</a>
+                    <a href={"/"} name="active" onClick={handleState} className={currentState === "active" ? "activated" : ""}>Active</a>
+                    <a href={"/"} name="complete" onClick={handleState} className={currentState === "complete" ? "activated" : ""}> Completed </a>
                 </div>
                 <div className="clear-completed">Clear Completed</div>
         </div>
 
         <div className={lightTheme ? "mb-input-group-light-item mb-component" : "mb-input-group-dark-item mb-component"}>
                 <div className="state mb-state">
-                    <a name="all" onClick={handleState} className={currentState === "all" ? "activated mb-anchor" : "mb-anchor"}>All</a>
-                    <a name="active" onClick={handleState} className={currentState === "active" ? "activated mb-anchor" : "mb-anchor"}>Active</a>
-                    <a name="complete" onClick={handleState} className={currentState === "complete" ? "activated mb-anchor" : "mb-anchor"}> Completed </a>
+                    <a href={"/"} name="all" onClick={handleState} className={currentState === "all" ? "activated mb-anchor" : "mb-anchor"}>All</a>
+                    <a href={"/"} name="active" onClick={handleState} className={currentState === "active" ? "activated mb-anchor" : "mb-anchor"}>Active</a>
+                    <a href={"/"} name="complete" onClick={handleState} className={currentState === "complete" ? "activated mb-anchor" : "mb-anchor"}> Completed </a>
                 </div>
         </div>
         </div>
