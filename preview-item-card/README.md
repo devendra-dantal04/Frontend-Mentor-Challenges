@@ -23,12 +23,18 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+### Desktop View
+
+![](screenshots/desktopview.png)
+
+### Mobile View
+
+![](screenshots/mobileview.png)
 
 ### Links
 
-- Solution URL: [solution URL](https://your-solution-url.com)
-- Live Site URL: [Live Preview](https://your-live-site-url.com)
+- Solution URL: [solution URL](https://github.com/devendra-dantal04/Frontend-Mentor-Challenges/tree/master/preview-item-card)
+- Live Site URL: [Live Preview](https://frontend-product-preview-card.netlify.app)
 
 ## My process
 
