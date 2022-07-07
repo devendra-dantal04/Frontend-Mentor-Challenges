@@ -1,0 +1,14 @@
+@mixin flex-item($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin hovercolor {
+    color: $almost-black;
+}
+
+@mixin alignItems($pos1, $pos2) {
+    display: flex;
+    align-items: $pos1;
+    justify-content: $pos2;    
+}

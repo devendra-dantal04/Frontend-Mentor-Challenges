@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;800&family=Fira+Code:wght@500&family=Fira+Sans:ital,wght@0,300;0,400;0,500;1,600;1,900&family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 8%);
+  overflow: hidden;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 8rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  padding: 3rem 4rem;
+  color: hsl(0deg, 0%, 41%);
+  transition: all 0.5s linear;
+}
+.navbar .nav-left {
+  display: flex;
+  flex-direction: row;
+}
+.navbar .nav-left .nav-logo {
+  margin-right: 2rem;
+}
+.navbar .nav-left .nav-dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navbar .nav-left .nav-dropdown-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0 2rem;
+  padding: 0.5rem;
+  align-items: center;
+  color: hsl(0deg, 0%, 41%);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s linear;
+}
+.navbar .nav-left .nav-dropdown-item:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.navbar .nav-left .nav-dropdown-item:hover .feature-dropdown {
+  display: block;
+}
+.navbar .nav-left .nav-dropdown-item:hover .arrow {
+  content: url("../images/icon-arrow-up.svg");
+}
+.navbar .nav-left .nav-dropdown-item .feature-dropdown {
+  display: none;
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  background: hsl(0deg, 0%, 98%);
+  border-radius: 0.5rem;
+  top: 3.5rem;
+  right: 0;
+  padding: 1rem 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.navbar .nav-left .nav-dropdown-item .feature-dropdown .drp-item {
+  display: flex;
+  padding: 0.8rem;
+}
+.navbar .nav-left .nav-dropdown-item .feature-dropdown .drp-item img {
+  margin-right: 0.8rem;
+}
+.navbar .nav-left .nav-dropdown-item p {
+  margin-right: 0.8rem;
+}
+.navbar .nav-left .nav-dropdown-item .arrow {
+  width: 1.2rem;
+  height: 1rem;
+}
+.navbar .nav-left .nav-dropdown .nav-item {
+  margin: 0 1rem;
+  color: hsl(0deg, 0%, 41%);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.navbar .nav-left .nav-dropdown .nav-item:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.navbar .nav-btns .nav-btn {
+  color: hsl(0deg, 0%, 41%);
+  padding: 1.2rem 2.8rem;
+  margin: 0 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  background: hsl(0deg, 0%, 98%);
+  border-radius: 1.5rem;
+  border: none;
+  font-family: "Epilogue", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.navbar .nav-btns .reg-btn {
+  border: 0.3rem solid hsl(0deg, 0%, 41%);
+}
+.navbar .nav-btns .reg-btn:hover {
+  border-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 8%);
+}
+.navbar .nav-btns .login-btn:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.navbar .overlay {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateX(100%);
+  transition: all 0.5s linear;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.navbar .overlay .nav-content {
+  z-index: 1;
+  height: 100%;
+  width: 60%;
+  background: white;
+  opacity: 1;
+  overflow: hidden;
+}
+.navbar .active {
+  transform: translateX(0%);
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.navbar .active .nav-content {
+  overflow: hidden;
+}
+.navbar .menu {
+  display: none;
+  cursor: pointer;
+  z-index: 2;
+}
+.navbar .menu-close .menu-icon {
+  content: url("../images/icon-close-menu.svg");
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2rem;
+}
+.hero-section-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: bottom;
+  padding-left: 15rem;
+}
+.hero-section-left h1 {
+  margin-top: 12rem;
+}
+.hero-section-left h1 span {
+  display: block;
+}
+.hero-section-left p {
+  width: 60%;
+  margin: 4rem 0;
+  line-height: 1.5;
+  color: hsl(0deg, 0%, 41%);
+}
+.hero-section-left .hero-btn {
+  font-family: "Epilogue", sans-serif;
+  display: inline-block;
+  font-size: 1.8rem;
+  color: hsl(0deg, 0%, 98%);
+  padding: 1.8rem 3.5rem;
+  background: hsl(0deg, 0%, 8%);
+  max-width: fit-content;
+  max-height: fit-content;
+  border-radius: 1.5rem;
+  border: 0.3rem solid hsl(0deg, 0%, 8%);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.hero-section-left .hero-btn:hover {
+  color: hsl(0deg, 0%, 8%);
+  background: hsl(0deg, 0%, 98%);
+}
+.hero-section-left .hero-client-logo {
+  margin-top: 10rem;
+}
+.hero-section-left .hero-client-logo img {
+  margin-right: 5rem;
+}
+.hero-section-right img {
+  width: 65%;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .navbar {
+    padding: 3rem 4rem 0 4rem;
+  }
+  .navbar .nav-left .nav-dropdown {
+    display: none;
+  }
+  .navbar .nav-btns {
+    display: none;
+  }
+  .navbar .menu {
+    display: block;
+  }
+
+  .hero-section {
+    flex-direction: column-reverse;
+  }
+  .hero-section-right {
+    margin: 0;
+    padding: 0;
+  }
+  .hero-section-right img {
+    content: url("../images/image-hero-mobile.png");
+    width: 100%;
+  }
+  .hero-section-left {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+  }
+  .hero-section-left h1 {
+    margin-top: 6rem;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  .hero-section-left h1 span {
+    display: inline;
+  }
+  .hero-section-left p {
+    width: 94%;
+    margin: 2rem 0;
+  }
+  .hero-section .hero-client-logo {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-section .hero-client-logo img {
+    width: 20%;
+    margin: 1rem;
+  }
+
+  .mobile-nav-dropdown {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 0 0 3rem;
+  }
+  .mobile-nav-dropdown .mobile-nav-dropdown-item {
+    font-size: 2.8rem;
+  }
+  .mobile-nav-dropdown .mobile-nav-dropdown-item p {
+    display: inline-block;
+    font-size: 2.2rem;
+    margin: 1.2rem 0;
+    margin-right: 1rem;
+  }
+  .mobile-nav-dropdown .mobile-nav-dropdown-item img {
+    display: inline-block;
+    width: 7%;
+  }
+  .mobile-nav-dropdown .mobile-nav-dropdown-item .feature-dropdown {
+    display: none;
+    padding: 0 2rem;
+  }
+  .mobile-nav-dropdown .activate-drp .feature-dropdown {
+    display: block;
+  }
+  .mobile-nav-dropdown .activate-drp .arrow {
+    content: url("../images/icon-arrow-up.svg");
+  }
+  .mobile-nav-dropdown .nav-item p {
+    display: inline-block;
+    font-size: 2.2rem;
+    margin: 1.3rem 0;
+    margin-right: 1rem;
+  }
+
+  .mobile-nav-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 4rem;
+  }
+  .mobile-nav-btns .mobile-nav-btn {
+    font-family: Ep;
+    color: hsl(0deg, 0%, 41%);
+    padding: 1.2rem 6rem;
+    margin: 0.8rem 1rem;
+    font-size: 2.2rem;
+    font-weight: 500;
+    background: hsl(0deg, 0%, 98%);
+    border-radius: 1.5rem;
+    border: none;
+    font-family: "Epilogue", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .mobile-nav-btns .mobile-login-btn:hover {
+    color: hsl(0deg, 0%, 8%);
+  }
+  .mobile-nav-btns .mobile-reg-btn {
+    border: 0.3rem solid hsl(0deg, 0%, 41%);
+  }
+  .mobile-nav-btns .mobile-reg-btn:hover {
+    border-color: hsl(0deg, 0%, 8%);
+    color: hsl(0deg, 0%, 8%);
+  }
+}/*# sourceMappingURL=main.css.map */
