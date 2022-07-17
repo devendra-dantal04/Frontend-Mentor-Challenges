@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL](https://github.com/devendra-dantal04/Frontend-Mentor-Challenges/tree/master/dropdown-menu)
-- Live Site URL: [Live Preview](https://frontend-dropdown-menu.netlify.app/)
+- Solution URL: [solution URL](https://github.com/devendra-dantal04/Frontend-Mentor-Challenges/tree/master/rating-component)
+- Live Site URL: [Live Preview](https://frontend-mentor-rating-component.netlify.app)
 
 ## My process
 
