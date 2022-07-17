@@ -21,7 +21,7 @@ if(document.querySelector('.rating-component')){
     })
     
     btn.addEventListener('click',(e)=>{
-        window.location.href = './submit.html';
+        window.location.href = './pages/submit.html';
     })
 }
 
