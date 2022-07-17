@@ -137,12 +137,20 @@ body {
 //-----------------------
 
 @media screen and (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+
     .container {
         width: 40%;
     }
 }
 
 @media screen and (max-width: 750px){
+    html{
+        font-size: 55%;
+    }
+    
     .container {
         width: 60%;
     }
