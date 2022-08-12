@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL](https://github.com/devendra-dantal04/Frontend-Mentor-Challenges/tree/master/fylo-landing-page)
-- Live Site URL: [Live Preview](https://frontend-mentor-rating-component.netlify.app)
+- Solution URL: [solution URL](https://github.com/devendra-dantal04/Frontend-Mentor-Challenges/tree/master/fylo%20landing%20page)
+- Live Site URL: [Live Preview](https://fylo-landing-page123.netlify.app)
 
 ## My process
 
