@@ -3,8 +3,10 @@
 ### Screenshot
 
 ## Desktop View
-![](/img/mobile.png)
+<img align="center" width="100%" src="./img/web.png">
+
+
 
 ## Mobile View
-![](/img/web.png)
 
+<img align="center" width="50%" src="./img/mobile.png">
