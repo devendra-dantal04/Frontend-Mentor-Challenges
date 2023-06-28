@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('../assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('../assets/fonts/Roboto-Bold.ttf');
+}
+
+:root {
+    --primary-font: 'Roboto-Regular', sans-serif;
+    --secondary-font: 'Roboto-Bold', sans-serif;
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+    --tomato: hsl(24, 100%, 67%);
+    --extra-red: hsl(14, 100%, 62%);
+    --gradient-pattern: linear-gradient(to right, hsl(347, 100%, 66%), hsl(24, 100%, 67%));
+}
+
+html {
+    font-family: 'Roboto Regular';
+    font-size: 62.5%;
+    background-color: var(--charcoal-grey);
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.container {
+    display: flex;
+    max-width: 90rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: auto;
+
+}
+
+.container .wrapper {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border: none;
+    border-radius: 2.5rem;
+    display: flex;
+}
+
+.content-wrapper {
+    padding-left: 2.5rem;
+    padding-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: auto 0;
+    width: 45rem;
+}
+
+.image-wrapper {
+    height: 50rem;
+    position: relative;
+}
+
+.image-wrapper .desktop-img {
+    height: 100%;
+}
+
+.image-wrapper .mobile-img {
+    display: none;
+}
+
+h2 {
+    font-size: 5rem;
+    font-family: 'Roboto Bold';
+    color: var(--dark-slate-grey);
+}
+
+.para {
+    font-size: 1.6rem;
+    padding: 1.5rem 0;
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin: 1.2rem 0;
+}
+
+.feature-item img {
+    margin-right: 1.5rem;
+}
+
+.feature-item span {
+    font-size: 1.6rem;
+}
+
+
+.email_input_container {
+    margin: 1.5rem 0;
+}
+
+.email-input {
+    height: 4.5rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--grey);
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.email-input:active {
+    border-color: var(--charcoal-grey);
+}
+
+.email-input:focus {
+    border-color: var(--charcoal-grey);
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.error {
+    color: var(--tomato);
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    text-align: center;
+    color: var(--white);
+    font-family: 'Roboto Bold';
+    font-size: 1.6rem;
+    background-color: var(--dark-slate-grey);
+    border: none;
+    border-radius: 1rem;
+    padding: 1.7rem;
+    margin-top: 0.5rem;
+    box-shadow: none;
+    transition: all 0.3s linear;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: var(--gradient-pattern);
+    box-shadow: var(--tomato) 0px 10px 40px;
+}
+
+
+/* Success Screen */
+
+.success-wrapper {
+    display: none;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    border: none;
+    border-radius: 2.5rem;
+    width: 45rem;
+}
+
+.success-wrapper h2 {
+    font-size: 5rem;
+    line-height: 1;
+    margin-top: 2.5rem;
+}
+
+.success-icon {
+    width: 4rem;
+}
+
+.confirm-msg {
+    padding: 2.5rem 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.success-wrapper {
+    display: none;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 55%;
+    }
+
+    .container .wrapper {
+        flex-direction: column-reverse;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        padding: 2rem 3rem;
+        margin-top: 1rem;
+    }
+
+    .image-wrapper .desktop-img {
+        display: none;
+    }
+
+    .image-wrapper .mobile-img {
+        display: block;
+        height: 90%;
+        width: 100%;
+    }
+
+    .image-wrapper {
+        height: auto;
+    }
+
+    .success-wrapper {
+        width: 100%;
+        border-radius: 0;
+        padding: 10rem 2rem 4rem 2rem;
+        align-content: space-between;
+        height: 100%;
+    }
+
+    .dismiss-btn {
+        margin-top: auto;
+    }
+}
