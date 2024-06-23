@@ -14,7 +14,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/frontend-preview-card-using-html-css-48gqI4g2A8)
 - Live Site URL: [Add live site URL here](https://blog-card-preview12.netlify.app/)
 
 ## My process
