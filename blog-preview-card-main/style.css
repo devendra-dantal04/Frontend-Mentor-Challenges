@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --primary: hsl(47, 88%, 63%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-grey: hsl(0, 0%, 50%);
+    --neutral-black: hsl(0, 0%, 7%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--neutral-black);
+}
+
+*:hover {
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+}
+
+/* Outer Container */
+.outer_container {
+    position: relative;
+    width: 375px;
+    height: auto;
+    padding: 20px;
+    background-color: white;
+    border: 1.5px solid var(--neutral-black);
+    border-radius: 15px;
+}
+
+
+.outer_container::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 100%;
+    width: 100%;
+    background-color: var(--neutral-black);
+    border-radius: 15px;
+    z-index: -99999;
+}
+
+.outer_container:hover::before {
+    top: 15px;
+    left: 15px;
+    transition: all 0.1s;
+}
+
+/* Img Container */
+
+.outer_container .image_container {
+    width: 100%;
+    height: auto;
+}
+
+.image_container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Content Container */
+.content_container {
+    margin-top: 20px;
+}
+
+.content_container .banner {
+    padding: 5px 12px;
+    background-color: var(--primary);
+    color: var(--neutral-black);
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: 800;
+}
+
+.content_container .para1 {
+    margin: 15px 0px;
+    color: var(--neutral-black);
+}
+
+.content_container .content_header {
+    font-weight: 800;
+}
+
+.content_container .content_header:hover {
+    color: var(--primary);
+    transition: all 0.1s;
+}
+
+.content_container .description {
+    margin: 20px 0px;
+    line-height: 1.5;
+    color: var(--neutral-grey);
+}
+
+.content_container .author_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.author_container img {
+    width: 50px;
+    height: auto;
+}
+
+.author_container .author_name {
+    margin-left: 10px;
+    font-weight: 800;
+}
+
+
+/* Media Query */
+
+@media screen and (max-width: 375px) {
+    body {
+        width: 100vw;
+        min-height: 100vh;
+    }
+
+    .outer_container {
+        max-width: 90%;
+    }
+}
